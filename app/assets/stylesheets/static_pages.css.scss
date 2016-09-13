@@ -1,0 +1,139 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$purple: #7e66e6-#0a000a;
+
+@mixin panel-color($color){
+	background-color:$color;
+		border-color:$color;
+}
+
+@mixin jumbotron-button{
+	background-color:transparent;
+	color:#fff;
+	font-size:18px;
+	border:1.25px solid #fff;
+	margin:5px;
+}
+
+body{font-family: 'Ubuntu', sans-serif;padding-top:70px;  position: relative;
+}
+
+.navbar-default{
+	margin-bottom:0px !important;
+	background-color:#fff !important;
+	border:none;
+	.container-fluid{
+		padding-left: 30px;
+		.navbar-brand{
+			padding: 10px;
+		}
+	}
+}
+
+.navbar-default .navbar-nav{
+	li {
+		a{
+			color: $purple;
+		}
+	}
+	li:hover {
+		a{
+			color: #fff;
+		}
+		background:$purple;
+	}
+	
+	
+}
+
+.navbar-default .navbar-nav>.active {
+		a{
+			color: #fff;
+			background:$purple !important;
+		}
+		
+	}
+
+
+.start{
+	height:350px;
+			background:linear-gradient(rgba(28, 14, 88, 0.85), rgba(14, 7, 66, 0.5)),url(https://upload.wikimedia.org/wikipedia/commons/3/3e/Storex3RingBinder.jpg);
+	background-repeat: no-repeat;
+	background-size:cover;
+	color:#fff;
+
+}
+
+.btn-default{
+	@include jumbotron-button;
+}
+
+.btn-default:hover{
+	@include jumbotron-button;
+}
+
+.btn-default:active{
+	@include jumbotron-button;
+}
+
+.btn-default:focus{
+	@include jumbotron-button;
+}
+
+#pricing{
+	.col-sm-3{
+		display:inline-block;
+		float:none;
+		margin:0;
+	}
+	
+	h1{
+		color:$purple;
+	}
+	
+	margin: 0 auto;
+	min-width:100%;
+}
+
+@mixin payment-panel($color){
+	border-color:$color;
+	.panel-heading{
+		@include panel-color($color);
+	}
+	
+	.panel-body .btn{
+		@include panel-color($color)
+	}
+}
+
+.panel-free{
+	@include payment-panel($purple);
+	
+}
+
+.panel-premium{
+	@include payment-panel($purple - #222);
+}
+
+.panel-super{
+	@include payment-panel($purple - #444);
+}
+
+.footer{
+	height:60px;
+	width:100%;
+	background-color:$purple;
+	color:#fff;
+	position:absolute;
+	.container-fluid p{
+		margin:20px 0;
+	}
+	a{
+		color:#fff;
+	}
+	.col-xs-4{
+		text-align:right;
+	}
+}
