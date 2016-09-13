@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @binder.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @binder.description %>
+</p>
+
+<%= link_to 'Edit', edit_binder_path(@binder) %> |
+<%= link_to 'Back', binders_path %>

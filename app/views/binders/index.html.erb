@@ -1,0 +1,29 @@
+<h1>Listing binders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @binders.each do |binder| %>
+      <tr>
+        <td><%= binder.title %></td>
+        <td><%= binder.description %></td>
+        <td><%= link_to 'Show', binder %></td>
+        <td><%= link_to 'Edit', edit_binder_path(binder) %></td>
+        <td><%= link_to 'Destroy', binder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Binder', new_binder_path %>
