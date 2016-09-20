@@ -11,3 +11,75 @@
  *= require_self
  *= require_tree .
  */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 70px;
+  position: relative; }
+
+.navbar-default {
+  margin-bottom: 0px !important;
+  background-color: #fff !important;
+  border: none; }
+  .navbar-default .container-fluid {
+    padding-left: 30px; }
+    .navbar-default .container-fluid .navbar-brand {
+      padding: 10px; }
+
+.navbar-default .navbar-nav li a {
+  color: #7466dc; }
+.navbar-default .navbar-nav li:hover {
+  background: #7466dc; }
+  .navbar-default .navbar-nav li:hover a {
+    color: #fff; }
+
+.navbar-default .navbar-nav > .active a {
+  color: #fff;
+  background: #7466dc !important; }
+
+.start {
+  height: 350px;
+  background: linear-gradient(rgba(28, 14, 88, 0.85), rgba(14, 7, 66, 0.5)), url(https://upload.wikimedia.org/wikipedia/commons/3/3e/Storex3RingBinder.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff; }
+
+.btn-default {
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  border: 1.25px solid #fff;
+  margin: 5px; }
+
+.btn-default:hover {
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  border: 1.25px solid #fff;
+  margin: 5px; }
+
+.btn-default:active {
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  border: 1.25px solid #fff;
+  margin: 5px; }
+
+.btn-default:focus {
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  border: 1.25px solid #fff;
+  margin: 5px; }
+  
+.footer {
+  height: 60px;
+  width: 100%;
+  background-color: #7466dc;
+  color: #fff;
+  position: absolute; }
+  .footer .container-fluid p {
+    margin: 20px 0; }
+  .footer a {
+    color: #fff; }
+  .footer .col-xs-4 {
+    text-align: right; }
