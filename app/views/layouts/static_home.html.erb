@@ -28,7 +28,8 @@
         <ul class="dropdown-menu">
           <li><a href="#">My Binders</a></li>
           <li><a href="#">Upgrade Payment Plan</a></li>
-          <li><a href="#">Edit User Info</a></li>
+          <li>  <%= link_to('Edit User Info', edit_user_registration_path) %>
+</li>
           <li><%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %></li>
         </ul>
       </li>
