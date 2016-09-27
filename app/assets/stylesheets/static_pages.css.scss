@@ -9,6 +9,11 @@ $purple: #7e66e6-#0a000a;
 		border-color:$color;
 }
 
+@mixin button($background, $font){
+	color: $font !important;
+	background: $background !important;
+}
+
 @mixin jumbotron-button{
 	background-color:transparent;
 	color:#fff;
@@ -50,8 +55,7 @@ body{font-family: 'Ubuntu', sans-serif !important;padding-top:70px;  position: r
 
 .navbar-default .navbar-nav>.active {
 		a{
-			color: #fff;
-			background:$purple !important;
+			@include button($purple, #fff);
 		}
 		
 	}
@@ -59,19 +63,17 @@ body{font-family: 'Ubuntu', sans-serif !important;padding-top:70px;  position: r
 
 .navbar-default .navbar-nav>.open {
 		a{
-			color: $purple !important;
-			background: #fff !important;
+			@include button(#fff, $purple);
 		}
 
 		.dropdown-menu >li{
 			a:active{
-				color: #fff !important;
-			background:$purple !important;
+
+				@include button($purple, #fff);
 			}
 
 			a:hover{
-				color: #fff !important;
-			background:$purple !important;
+				@include button($purple, #fff);
 			}
 		}
 		
