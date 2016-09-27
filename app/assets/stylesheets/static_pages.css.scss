@@ -17,7 +17,7 @@ $purple: #7e66e6-#0a000a;
 	margin:5px;
 }
 
-body{font-family: 'Ubuntu', sans-serif;padding-top:70px;  position: relative;
+body{font-family: 'Ubuntu', sans-serif !important;padding-top:70px;  position: relative;
 }
 
 .navbar-default{
@@ -56,6 +56,26 @@ body{font-family: 'Ubuntu', sans-serif;padding-top:70px;  position: relative;
 		
 	}
 
+
+.navbar-default .navbar-nav>.open {
+		a{
+			color: $purple !important;
+			background: #fff !important;
+		}
+
+		.dropdown-menu >li{
+			a:active{
+				color: #fff !important;
+			background:$purple !important;
+			}
+
+			a:hover{
+				color: #fff !important;
+			background:$purple !important;
+			}
+		}
+		
+	}
 
 .start{
 	height:350px;
