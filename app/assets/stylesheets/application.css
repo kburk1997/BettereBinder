@@ -83,3 +83,11 @@ body {
     color: #fff; }
   .footer .col-xs-4 {
     text-align: right; }
+form{
+  margin: 15px;
+}
+
+.register-header{
+  color: #7466dc;
+  margin: 15px;
+}
