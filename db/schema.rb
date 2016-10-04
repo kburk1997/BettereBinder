@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160920202538) do
+ActiveRecord::Schema.define(version: 20161004202229) do
 
   create_table "binders", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tabs", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at"

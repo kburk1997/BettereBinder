@@ -1,4 +1,6 @@
 BettereBinder::Application.routes.draw do
+  resources :tabs
+
   devise_for :users
   resources :binders
 
