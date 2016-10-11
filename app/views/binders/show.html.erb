@@ -12,9 +12,9 @@
 
 <p><strong>Tabs:</strong></p>
 
-    	<%= link_to ('<i class="fa fa-plus" style="display: inline block"></i>&nbsp; New tab').html_safe, new_tab_path(@binder) %><br>
+    	<%= link_to ('<i class="fa fa-plus" style="display: inline block"></i>&nbsp; New tab').html_safe, new_binder_tab_path(@binder) %><br>
 
-<% @binder.tabs.each do |tab| %>
+<% @tabs.each do |tab| %>
   <p>
     <strong>Title:</strong>
     <%= tab.title %>

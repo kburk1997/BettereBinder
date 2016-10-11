@@ -10,6 +10,7 @@ class BindersController < ApplicationController
   # GET /binders/1
   # GET /binders/1.json
   def show
+    @tabs=@binder.tabs
   end
 
   # GET /binders/new

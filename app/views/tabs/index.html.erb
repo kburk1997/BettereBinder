@@ -16,9 +16,9 @@
       <tr>
         <td><%= tab.title %></td>
         <td><%= tab.description %></td>
-        <td><%= link_to 'Show', tab %></td>
-        <td><%= link_to 'Edit', edit_tab_path(tab) %></td>
-        <td><%= link_to 'Destroy', tab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', binder_tab_path(@binder, tab) %></td>
+        <td><%= link_to 'Edit', edit_binder_tab_path(@binder, tab) %></td>
+        <td><%= link_to 'Destroy', binder_tab_path(@binder,tab), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Tab', new_tab_path %>
+<%= link_to 'New Tab', new_binder_tab_path(@binder) %>

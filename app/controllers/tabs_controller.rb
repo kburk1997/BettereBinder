@@ -5,35 +5,48 @@ class TabsController < ApplicationController
 
   def index
     @tabs = Tab.all
+    @binder=Binder.find(params[:binder_id])
     respond_with(@tabs)
   end
 
   def show
-    respond_with(@tab)
+    @binder=Binder.find(params[:binder_id])
+
+    respond_with(@binder, @tab)
   end
 
   def new
+    @binder=Binder.find(params[:binder_id])
+
     @tab = Tab.new
-    respond_with(@tab)
+    respond_with(@binder, @tab)
   end
 
   def edit
+    @binder=Binder.find(params[:binder_id])
+
   end
 
   def create
-    @tab = Tab.new(tab_params)
+    @binder=Binder.find(params[:binder_id])
+
+    @tab = @binder.tabs.create(tab_params)
     @tab.save
-    respond_with(@tab)
+    respond_with(@binder, @tab)
   end
 
   def update
+    @binder=Binder.find(params[:binder_id])
+
     @tab.update(tab_params)
-    respond_with(@tab)
+    respond_with(@binder, @tab)
   end
 
   def destroy
+    @binder=Binder.find(params[:binder_id])
+
     @tab.destroy
-    respond_with(@tab)
+    respond_with(@binder, @tab)
   end
 
   private
