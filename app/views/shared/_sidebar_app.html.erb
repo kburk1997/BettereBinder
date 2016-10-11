@@ -1,0 +1,33 @@
+            <style>
+            a .well .well-sm{
+              margin-bottom: 2px;
+            }
+            </style>
+
+            <ul class="nav nav-pills nav-stacked nav-outer" id="navbar">
+              <%if @tabs%>
+
+              <%@tabs.each do |t|%>
+                <li>
+                <%if t==(@tab)%>
+                  <%=link_to do%>
+                    <%t.title%>
+                  <%end%>
+
+                  <div id="subtabs">
+                    <ul class="nav nav-inner">
+                        <%@tab.subtabs.each do |s|%>
+                          <li><%=link_to s.title, tab_subtab_path(@tab, s), :class => "well well-sm", :style => " margin-bottom: 2px;"%></li>
+                        <%end%>
+                    </ul>
+                  </div>
+                <%else%>
+                  <%=link_to tab_path(t) do%>
+                    <%t.title%>
+                  <%end%>
+                <%end%>
+                </li>
+              <%end%>
+
+              <%end%>
+            </ul>

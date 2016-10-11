@@ -1,0 +1,17 @@
+            <style>
+            a .well .well-sm{
+              margin-bottom: 2px;
+            }
+            </style>
+
+            <ul class="nav nav-pills nav-stacked nav-outer" id="navbar">
+              <%if @tabs%>
+                <%@tabs.each do |t|%>
+                  <li>
+                    <%=link_to tab_path(t) do%>
+                      <%t.title%>
+                    <%end%>
+                  </li>
+                <%end%>
+              <%end%>
+            </ul>

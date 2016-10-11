@@ -1,0 +1,18 @@
+Tue, 11 Oct 2016 13:40:34 -0400
+README.rdoc	Tue, 13 Sep 2016 15:46:48 -0400
+app/controllers/application_controller.rb	Tue, 13 Sep 2016 15:46:54 -0400
+app/controllers/binders_controller.rb	Tue, 11 Oct 2016 12:24:05 -0400
+app/controllers/documents_controller.rb	Tue, 11 Oct 2016 13:22:58 -0400
+app/controllers/static_pages_controller.rb	Tue, 27 Sep 2016 16:10:54 -0400
+app/controllers/tab_controller.rb	Tue, 04 Oct 2016 16:38:27 -0400
+app/controllers/tabs_controller.rb	Tue, 11 Oct 2016 12:33:43 -0400
+app/helpers/application_helper.rb	Tue, 13 Sep 2016 15:46:54 -0400
+app/helpers/binders_helper.rb	Tue, 13 Sep 2016 16:47:36 -0400
+app/helpers/documents_helper.rb	Tue, 11 Oct 2016 12:40:47 -0400
+app/helpers/static_pages_helper.rb	Tue, 13 Sep 2016 16:46:43 -0400
+app/helpers/tab_helper.rb	Tue, 04 Oct 2016 16:38:27 -0400
+app/helpers/tabs_helper.rb	Tue, 04 Oct 2016 16:21:21 -0400
+app/models/binder.rb	Tue, 11 Oct 2016 12:00:03 -0400
+app/models/document.rb	Tue, 11 Oct 2016 12:40:46 -0400
+app/models/tab.rb	Tue, 04 Oct 2016 16:32:20 -0400
+app/models/user.rb	Tue, 11 Oct 2016 11:59:55 -0400
