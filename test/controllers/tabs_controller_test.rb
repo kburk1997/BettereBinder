@@ -13,7 +13,7 @@ class TabsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, :binder_id=> @binder.id
     assert_response :success
   end
 
@@ -22,29 +22,29 @@ class TabsControllerTest < ActionController::TestCase
       post :create, tab: { description: @tab.description, title: @tab.title }, binder_id: @binder
     end
 
-    assert_redirected_to tab_path(assigns(:tab))
+    assert_redirected_to binder_tab_path(@binder, assigns(:tab))
   end
 
   test "should show tab" do
-    get :show, id: @tab
+    get :show, :binder_id=> @binder.id, id: @tab
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @tab
+    get :edit, :binder_id=> @binder.id, id: @tab
     assert_response :success
   end
 
   test "should update tab" do
-    patch :update, id: @tab, tab: { description: @tab.description, title: @tab.title }
-    assert_redirected_to tab_path(assigns(:tab))
+    patch :update, :binder_id=> @binder.id, id: @tab, tab: { description: @tab.description, title: @tab.title }
+    assert_redirected_to binder_tab_path(@binder, assigns(:tab))
   end
 
   test "should destroy tab" do
     assert_difference('Tab.count', -1) do
-      delete :destroy, id: @tab
+      delete :destroy, :binder_id=> @binder.id, id: @tab
     end
 
-    assert_redirected_to tabs_path
+    assert_redirected_to binder_tabs_path(@binder)
   end
 end
