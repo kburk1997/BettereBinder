@@ -2,6 +2,8 @@ require 'test_helper'
 
 class DocumentsControllerTest < ActionController::TestCase
   setup do
+    @binder=binders(:one)
+    @tab = tabs(:one)
     @document = documents(:one)
   end
 

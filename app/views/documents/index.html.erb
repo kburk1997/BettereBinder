@@ -20,9 +20,9 @@
         <td><%= document.description %></td>
         <td><%= document.document_url %></td>
         <td><%= document.tab %></td>
-        <td><%= link_to 'Show', document %></td>
-        <td><%= link_to 'Edit', edit_document_path(document) %></td>
-        <td><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', binder_tab_document_path(@binder,@tab,document) %></td>
+        <td><%= link_to 'Edit', edit_binder_tab_document_path(@binder,@tab, document) %></td>
+        <td><%= link_to 'Destroy', binder_tab_document_path(@binder,@tab,document), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Document', new_document_path %>
+<%= link_to 'New Document', new_binder_tab_document_path %>
