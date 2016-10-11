@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011160221) do
+ActiveRecord::Schema.define(version: 20161011164046) do
 
   create_table "binders", force: true do |t|
     t.string   "title"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 20161011160221) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "documents", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "document_url"
+    t.integer  "tab_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "documents", ["tab_id"], name: "index_documents_on_tab_id"
 
   create_table "tabs", force: true do |t|
     t.string   "title"
