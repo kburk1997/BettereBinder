@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20161011164046) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "documents", force: true do |t|
