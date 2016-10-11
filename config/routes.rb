@@ -1,9 +1,10 @@
 BettereBinder::Application.routes.draw do
   
-
   devise_for :users
   resources :binders do
-    resources :tabs
+    resources :tabs do
+      resources :documents
+    end
   end
 
   get "static_pages/home"
