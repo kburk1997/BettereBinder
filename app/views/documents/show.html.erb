@@ -20,5 +20,5 @@
   <%= @document.tab %>
 </p>
 
-<%= link_to 'Edit', edit_document_path(@document) %> |
-<%= link_to 'Back', documents_path %>
+<%= link_to 'Edit', edit_binder_tab_document_path(@binder,@tab,@document) %> |
+<%= link_to 'Back', binder_tab_documents_path(@binder,@tab) %>

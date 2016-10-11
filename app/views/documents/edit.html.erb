@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @document %> |
+<%= link_to 'Show', binder_tab_document_path(@binder,@tab,@document) %> |
 <%= link_to 'Back', binder_tab_documents_path(@binder,@tab) %>
