@@ -3,7 +3,9 @@
 one:
   title: MyString
   description: MyText
+  binder_id: 1
 
 two:
   title: MyString
   description: MyText
+  binder_id: 1

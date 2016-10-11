@@ -2,11 +2,12 @@ require 'test_helper'
 
 class TabsControllerTest < ActionController::TestCase
   setup do
+    @binder=binders(:one)
     @tab = tabs(:one)
   end
 
   test "should get index" do
-    get :index
+    get :index, :binder_id=> @binder.id
     assert_response :success
     assert_not_nil assigns(:tabs)
   end
@@ -18,7 +19,7 @@ class TabsControllerTest < ActionController::TestCase
 
   test "should create tab" do
     assert_difference('Tab.count') do
-      post :create, tab: { description: @tab.description, title: @tab.title }
+      post :create, tab: { description: @tab.description, title: @tab.title }, binder_id: @binder
     end
 
     assert_redirected_to tab_path(assigns(:tab))
