@@ -16,13 +16,13 @@
 
                   <div id="subtabs">
                     <ul class="nav nav-inner">
-                        <%@tab.subtabs.each do |s|%>
-                          <li><%=link_to s.title, tab_subtab_path(@tab, s), :class => "well well-sm", :style => " margin-bottom: 2px;"%></li>
+                        <%@documents.each do |s|%>
+                          <li><%=link_to s.title, binder_tab_document_path(@binder,@tab, s), :class => "well well-sm", :style => " margin-bottom: 2px;"%></li>
                         <%end%>
                     </ul>
                   </div>
                 <%else%>
-                  <%=link_to tab_path(t) do%>
+                  <%=link_to binder_tab_path(@binder,t) do%>
                     <%t.title%>
                   <%end%>
                 <%end%>

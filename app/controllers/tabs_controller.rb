@@ -11,7 +11,8 @@ class TabsController < ApplicationController
 
   def show
     @binder=Binder.find(params[:binder_id])
-
+    @tabs=@binder.tabs
+    @documents=@tab.documents
     respond_with(@binder, @tab)
   end
 

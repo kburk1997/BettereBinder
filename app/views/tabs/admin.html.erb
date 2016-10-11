@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="col-xs-12 col-main col-collapsed" id="content">
+    	<h1>Viewing Pages for Tab: <%= @tab.title %></h1>
+    	<%= link_to ('<i class="fa fa-plus" style="display: inline block"></i>&nbsp; New page').html_safe, new_tab_subtab_path(@tab) %>
+
+    	<table class="table">
+    		<tr>
+		    <th>Title</th>
+		    <th>Actions</th>
+		    <th></th>
+		    <th></th>
+		  </tr>
+		 
+		  <% @subtabs.each do |subtab| %>
+		    <tr>
+		      <td><%= subtab.title %></td>
+		      <td><%= link_to ('<i class="fa fa-book" style="display: inline block"></i>&nbsp; Show').html_safe, tab_subtab_path(@tab, subtab) %></td>
+      		  <td><%= link_to ('<i class="fa fa-pencil" style="display: inline block"></i>&nbsp; Edit').html_safe, edit_tab_subtab_path(@tab, subtab) %></td>
+      		  <td><%= link_to ('<i class="fa fa-trash" style="display: inline block"></i>&nbsp; Delete').html_safe, tab_subtab_path(@tab, subtab),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+		    </tr>
+		  <% end %>
+		</table>
+
+    	<%= link_to ('<i class="fa fa-chevron-left" style="display: inline block"></i>&nbsp; Back to Main Admin Page').html_safe, admin_path %>
+
+    </div>
+</div>

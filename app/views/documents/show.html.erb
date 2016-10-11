@@ -1,24 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @document.title %>
-</p>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+});
+</script>
 
-<p>
-  <strong>Description:</strong>
-  <%= @document.description %>
-</p>
-
-<p>
-  <strong>Document url:</strong>
-  <%= @document.document_url %>
-</p>
-
-<p>
-  <strong>Tab:</strong>
-  <%= @document.tab %>
-</p>
-
+<style>
+iframe{
+  width:100%;
+}
+</style>
+<div class="container">
+	<div class="row row-offcanvas row-offcanvas-left">
+		<div class="col-xs-5 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		<%=render "shared/sidebar_app"%>
+		</div>
+		<!-- main area -->
+        <div class="col-xs-12 col-sm-9">
+          <h1><%= h @document.title%></h1>
+          <div style="width:100%">
+          <%= content_tag(:iframe,'', height: 480, src: @document.document_url) %>
+          </div>
+        </div><!-- /.col-xs-12 main -->
+	</div>
+</div>
 <%= link_to 'Edit', edit_binder_tab_document_path(@binder,@tab,@document) %> |
 <%= link_to 'Back', binder_tab_documents_path(@binder,@tab) %>

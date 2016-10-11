@@ -1,14 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @tab.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @tab.description %>
-</p>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+});
+</script>
+<div class="container">
+	<div class="row row-offcanvas row-offcanvas-left">
+		<div class="col-xs-5 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		<%=render "shared/sidebar_app"%>
+		</div>
+		<!-- main area -->
+        <div class="col-xs-12 col-sm-9">
+          <h1><%=h @tab.title%></h1>
+          <%=@tab.description%>
+          
+        </div><!-- /.col-xs-12 main -->
+	</div>
+</div>
 
 <%= link_to 'Edit', edit_binder_tab_path(@binder, @tab) %> |
 <%= link_to 'Back', binder_tabs_path(@binder) %>

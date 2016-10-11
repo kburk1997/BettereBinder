@@ -12,6 +12,8 @@ class DocumentsController < ApplicationController
   end
 
   def show
+    @tabs=@binder.tabs
+    @documents=@tab.documents
     respond_with(@binder,@tab,@document)
   end
 
