@@ -82,7 +82,7 @@ html{
   padding-top: 20px;
 }
 
-h1,h2,h3,h4,h5{
+/*h1,h2,h3,h4,h5{
   font-family: 'Coming Soon',cursive;
 }
 @keyframes fade-transition{
@@ -93,7 +93,7 @@ h1,h2,h3,h4,h5{
 @-webkit-keyframes fade-transition{
   0%{-webkit-opacity:0;}
   100%{-webkit-opacity:1;}
-}
+}*/
 .col-xs-12 {
   background-color: #fff;
   padding:30px;
@@ -103,7 +103,7 @@ h1,h2,h3,h4,h5{
 
 }
 
-.col-xs-12 h1,h2,h3,h4,h5,p,ul,ol,table,dl{
+/*.col-xs-12 h1,h2,h3,h4,h5,p,ul,ol,table,dl{
   animation-name: fade-transition;
   animation-duration:1.5s;
   animation-fill-mode: forwards;
@@ -111,7 +111,7 @@ h1,h2,h3,h4,h5{
   -webkit-animation-name: fade-transition;
   -webkit-animation-duration:1.5s;
   -webkit-animation-fill-mode: forwards;
-}
+}*/
 #sidebar {
   height: 100%;
   padding-right: 0;

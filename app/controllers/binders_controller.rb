@@ -9,7 +9,7 @@ class BindersController < ApplicationController
   end
 
   def user
-    
+    @binders=current_user.binders
   end
 
   # GET /binders/1

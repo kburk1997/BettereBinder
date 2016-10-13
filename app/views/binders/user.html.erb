@@ -1,0 +1,19 @@
+<div class="row">
+
+<div class="col-xs-12">
+
+<h2 class="register-header">Your Binders</h2>
+
+<%if @binders%>
+
+<%@binders.each do |b|%>
+	<%=b.title%>
+<%end%>
+<%else%>
+
+	You have no binders.
+<%end%>
+
+</div>
+
+</div>
