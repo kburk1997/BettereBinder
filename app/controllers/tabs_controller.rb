@@ -1,5 +1,6 @@
 class TabsController < ApplicationController
   before_action :set_tab, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
 
   respond_to :html
 

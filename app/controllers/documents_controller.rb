@@ -2,6 +2,7 @@ class DocumentsController < ApplicationController
   before_action :set_tabs
 
   before_action :set_document, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
 
   respond_to :html
 
@@ -14,8 +15,11 @@ class DocumentsController < ApplicationController
   def show
     @tabs=@binder.tabs
     @documents=@tab.documents
+    for d in @documents
+      puts d
+    end
     puts @documents
-    respond_with(@binder,@tab,@document)
+    respond_with(@binder,@tab,@document,@tabs,@documents)
   end
 
   def new

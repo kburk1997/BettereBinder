@@ -1,10 +1,15 @@
 class BindersController < ApplicationController
   before_action :set_binder, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
 
   # GET /binders
   # GET /binders.json
   def index
     @binders = Binder.all
+  end
+
+  def user
+    
   end
 
   # GET /binders/1
