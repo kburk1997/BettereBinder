@@ -49,6 +49,241 @@ body {
   font-size: 18px;
   border: 1.25px solid #fff;
   margin: 5px; }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootsy
+ *= require_self
+ *= require_tree .
+ */
+
+ @import 'https://fonts.googleapis.com/css?family=Coming+Soon';
+body {
+  padding-top: 51px;
+  background-image: linear-gradient(#f0f4f8 0,#c5e2e2 100%);  
+  background-repeat: repeat-x;
+  min-height: 100%;
+  color: #666;
+  font-family: 'Lato', sans-serif;
+}
+html{
+  background: #c5e2e2;
+
+}
+.text-center {
+  padding-top: 20px;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Coming Soon',cursive;
+}
+@keyframes fade-transition{
+  0%{opacity:0;}
+  100%{opacity:1;}
+}
+
+@-webkit-keyframes fade-transition{
+  0%{-webkit-opacity:0;}
+  100%{-webkit-opacity:1;}
+}
+.col-xs-12 {
+  background-color: #fff;
+  padding:30px;
+  border-radius:20px;
+  opacity:0.88;
+  margin-top: 20px;
+
+}
+
+.col-xs-12 h1,h2,h3,h4,h5,p,ul,ol,table,dl{
+  animation-name: fade-transition;
+  animation-duration:1.5s;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-name: fade-transition;
+  -webkit-animation-duration:1.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+#sidebar {
+  height: 100%;
+  padding-right: 0;
+  padding-top: 20px;
+  opacity:0.88;
+
+}
+
+
+#sidebar .nav {
+  width: 95%;
+  background-color:#fff;
+  padding: 2px;
+  opacity:0.88;
+
+
+}
+#sidebar li {
+  border:#f2f2f2 solid;
+  border-width:1px;
+  border-radius: 4px;
+  background: #fff;
+  opacity:0.88;
+
+}
+
+/*#sidebar li a{
+  color: #34b734;
+}*/
+
+/* collapsed sidebar styles */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  @keyframes move-out-left{
+    0%{left: 0%;}
+    100%{left: 41.6%;}
+  }
+
+  @-webkit-keyframes move-out-left{
+    0%{left: 0%;}
+    100%{left: 41.6%;}
+  }
+
+  .col-xs-12 {
+    background-color: #fff;
+    margin-top: 20px;
+
+  }
+
+  .col-xs-12 h1,h2,h3,h4,h5,p,ul,ol,table,dl{
+    animation-name: fade-transition;
+    animation-duration:0.75s;
+    animation-fill-mode: both;
+    animation-delay:1s;
+
+    -webkit-animation-name: fade-transition;
+    -webkit-animation-duration:0.75s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-delay:1s;
+  }
+
+  @keyframes move-in-left{
+    0%{left: 41.6%;}
+    100%{left: 0%;}
+  }
+
+  @-webkit-keyframes move-in-left{
+    0%{left: 41.6%;}
+    100%{left: 0%;}
+  }
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -41.6%;
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -41.6%;
+  }
+
+  .row-offcanvas-left{
+    animation-name: move-in-left;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-name: move-in-left;
+    -webkit-animation-duration:1s;
+    -webkit-animation-fill-mode:forwards;
+  }
+  .row-offcanvas-right.active {
+    right: 41.6%;
+  }
+  .row-offcanvas-left.active {
+    animation-name: move-out-left;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-name: move-out-left;
+    -webkit-animation-duration:1s;
+    -webkit-animation-fill-mode:forwards;
+
+    height:100%;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 41.6%;
+  }
+  #sidebar {
+    padding-top:20px;
+    position: absolute;
+    opacity:0.88;
+  }
+}
+
+
+
+
+.grey{
+  background-color: #eee;
+}
+
+a .well .well-sm{
+  margin-bottom: 2px;
+}
+
+ul .nav{
+  padding-top:20px;
+}
+
+ul .nav-inner{
+  padding-top:0px;
+}
+
+.navbar-custom{
+  background-image: linear-gradient(to bottom, rgba(223,240,216,.77) 0, #dff0d8 100%);
+}
+
+.navbar-custom{
+  background-color: #dff0d8;
+  border-color: #c1e3b5;
+  border-width: 0 0 1px;
+}
+
+.navbar-default .navbar-toggle:hover{
+  background-color:#c1e3b5;
+}
+
+.navbar-default .navbar-toggle:active{
+  background-color:#c1e3b5;
+}
+
+.navbar-default .navbar-toggle:focus{
+  background-color:#c1e3b5;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: #74b15d;
+}
+
+.navbar-default .navbar-toggle{
+  border-color: #c1e3b5;
+}
+
+.col-main{
+}
+
+
 
 .btn-default:hover {
   background-color: transparent;
