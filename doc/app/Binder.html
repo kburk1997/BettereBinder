@@ -64,7 +64,19 @@
 
     
     
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
     
+    <li ><a href="#method-i-tabs">#tabs</a>
+    
+    <li ><a href="#method-i-user">#user</a>
+    
+  </ul>
+</div>
+
   </div>
 </nav>
 
@@ -75,6 +87,8 @@
 
   <section class="description">
     
+<p>This class is the base for the digital binder.</p>
+
   </section>
 
   
@@ -90,6 +104,78 @@
     
 
     
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-tabs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">tabs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Each binder has a collection of tabs.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="tabs-source">
+            <pre><span class="ruby-comment"># File app/models/binder.rb, line 11</span>
+<span class="ruby-identifier">has_many</span> <span class="ruby-value">:tabs</span>
+</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">user</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Each binder belongs to a user and can only be edited by that user.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="user-source">
+            <pre><span class="ruby-comment"># File app/models/binder.rb, line 7</span>
+<span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:user</span>
+</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
   </section>
 </main>
 

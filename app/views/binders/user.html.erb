@@ -4,11 +4,11 @@
 
 <h2 class="register-header">Your Binders</h2>
 
-<%if @binders%>
+<%if @user.binders -%>
 
-<%@binders.each do |b|%>
-	<%=b.title%>
-<%end%>
+	<%@user.binders.each do |b|%>
+		<%=b.title%>
+	<%end%>
 <%else%>
 
 	You have no binders.

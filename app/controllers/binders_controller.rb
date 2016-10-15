@@ -1,23 +1,45 @@
+##
+#Controller for the Binder class.
 class BindersController < ApplicationController
   before_action :set_binder, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :except => [:show, :index]
 
-  # GET /binders
-  # GET /binders.json
+  ##
+  # When called, shows the homepage for all binders.
+  #
+  # Routes:
+  # * GET /binders - standard HTML page
+  # * GET /binders.json - JSON data for binders
   def index
     @binders = Binder.all
   end
 
+  ##
+  #Login required
+  #
+  #When called, shows all the current user's binders.
+  #
+  #Route: /my_binders/
   def user
     @binders=current_user.binders
+    @user=current_user
   end
 
-  # GET /binders/1
-  # GET /binders/1.json
+  ##
+  #Shows the homepage for a given binder.
+  #In the following example, the binder id is 1.
+  #
+  # Routes:
+  # * GET /binders/1 - Shows the homepage for the binder with id 1.
+  # * GET /binders/1.json - Shows JSON data for binder id 1.
   def show
     @tabs=@binder.tabs
   end
-
+  
+  ##
+  #Login required
+  #Creates a new binder.
+  #Route:
   # GET /binders/new
   def new
     @binder = Binder.new

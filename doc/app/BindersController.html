@@ -84,6 +84,8 @@
     
     <li ><a href="#method-i-update">#update</a>
     
+    <li ><a href="#method-i-user">#user</a>
+    
   </ul>
 </div>
 
@@ -97,6 +99,8 @@
 
   <section class="description">
     
+<p>Controller for the <a href="Binder.html">Binder</a> class.</p>
+
   </section>
 
   
@@ -137,7 +141,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 27</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 54</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@binder</span> = <span class="ruby-constant">Binder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">binder_params</span>)
 
@@ -180,7 +184,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 57</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 84</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@binder</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
@@ -217,7 +221,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 49</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -243,13 +247,20 @@
 
         <div class="method-description">
           
-          <p>GET /binders GET /binders.json</p>
+          <p>When called, shows the homepage for all binders.</p>
+
+<p>Routes:</p>
+<ul><li>
+<p>GET /binders - standard HTML page</p>
+</li><li>
+<p>GET /binders.json - JSON data for binders</p>
+</li></ul>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 6</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@binders</span> = <span class="ruby-constant">Binder</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -276,13 +287,15 @@
 
         <div class="method-description">
           
-          <p>GET /binders/new</p>
+          <p>Login required Creates a new binder. Route:</p>
+
+<pre>GET /binders/new</pre>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 17</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 44</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@binder</span> = <span class="ruby-constant">Binder</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -309,13 +322,18 @@
 
         <div class="method-description">
           
-          <p>GET /binders/1 GET /binders/1.json</p>
+          <p>Shows the homepage for a given binder. In the following example, the binder
+id is 1.</p>
+
+<pre>Routes:
+* GET /binders/1 - Shows the homepage for the binder with id 1.
+* GET /binders/1.json - Shows JSON data for binder id 1.</pre>
           
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@tabs</span>=<span class="ruby-ivar">@binder</span>.<span class="ruby-identifier">tabs</span>
 <span class="ruby-keyword">end</span></pre>
@@ -348,7 +366,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 43</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 70</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@binder</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">binder_params</span>)
@@ -359,6 +377,44 @@
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@binder</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span> }
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">user</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Login required</p>
+
+<p>When called, shows all the current user’s binders.</p>
+
+<p>Route: /my_binders/</p>
+          
+          
+
+          
+          <div class="method-source-code" id="user-source">
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">user</span>
+  <span class="ruby-ivar">@binders</span>=<span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">binders</span>
+  <span class="ruby-ivar">@user</span>=<span class="ruby-identifier">current_user</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
