@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   ##
-  #Each user has a collection of binders.
+  #Each user has a collection of binders (see Binder).
   has_many :binders
 
 end
