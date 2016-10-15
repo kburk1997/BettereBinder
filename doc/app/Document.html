@@ -85,7 +85,22 @@
 
   <section class="description">
     
-<p>This class stores a link to an externally hosted document.</p>
+<p>Attributes:</p>
+<ul><li>
+<p>id [integer, primary, not null] - primary key</p>
+</li><li>
+<p>created_at [datetime] - creation time</p>
+</li><li>
+<p>description [text] - TODO: document me</p>
+</li><li>
+<p>document_url [string] - TODO: document me</p>
+</li><li>
+<p>tab_id [integer] - belongs to :tab</p>
+</li><li>
+<p>title [string]</p>
+</li><li>
+<p>updated_at [datetime] - last update time</p>
+</li></ul>
 
   </section>
 
@@ -121,13 +136,14 @@
 
         <div class="method-description">
           
-          <p>Each document lives inside a tab, which lives inside a binder.</p>
+          <p>Each document lives inside a <a href="Tab.html">Tab</a>, which lives inside
+a <a href="Binder.html">Binder</a>.</p>
           
           
 
           
           <div class="method-source-code" id="tab-source">
-            <pre><span class="ruby-comment"># File app/models/document.rb, line 6</span>
+            <pre><span class="ruby-comment"># File app/models/document.rb, line 16</span>
 <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:tab</span>
 </pre>
           </div>

@@ -72,6 +72,8 @@
     
     <li ><a href="#method-i-binder">#binder</a>
     
+    <li ><a href="#method-i-documents">#documents</a>
+    
   </ul>
 </div>
 
@@ -85,7 +87,20 @@
 
   <section class="description">
     
-<p>This class stores a collection of documents.</p>
+<p>Attributes:</p>
+<ul><li>
+<p>id [integer, primary, not null] - primary key</p>
+</li><li>
+<p>binder_id [integer] - belongs to :binder</p>
+</li><li>
+<p>created_at [datetime] - creation time</p>
+</li><li>
+<p>description [text] - TODO: document me</p>
+</li><li>
+<p>title [string]</p>
+</li><li>
+<p>updated_at [datetime] - last update time</p>
+</li></ul>
 
   </section>
 
@@ -127,8 +142,41 @@
 
           
           <div class="method-source-code" id="binder-source">
-            <pre><span class="ruby-comment"># File app/models/tab.rb, line 6</span>
+            <pre><span class="ruby-comment"># File app/models/tab.rb, line 15</span>
 <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:binder</span>
+</pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-documents" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">documents</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Each tab stores a collection of documents (see <a
+href="Document.html">Document</a>).</p>
+          
+          
+
+          
+          <div class="method-source-code" id="documents-source">
+            <pre><span class="ruby-comment"># File app/models/tab.rb, line 19</span>
+<span class="ruby-identifier">has_many</span> <span class="ruby-value">:documents</span>
 </pre>
           </div>
           

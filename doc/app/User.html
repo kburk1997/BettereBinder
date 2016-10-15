@@ -85,18 +85,35 @@
 
   <section class="description">
     
-<p>Base user class for the platform.</p>
-
-<p>This user has all default devise modules, including:</p>
-
-<pre>*database_authenticable
-*registerable
-*recoverable
-*rememberable
-*trackable
-*validatable</pre>
-
-<p>See Devise documentation for more information on these modules.</p>
+<p>Attributes:</p>
+<ul><li>
+<p>id [integer, primary, not null] - primary key</p>
+</li><li>
+<p>created_at [datetime, not null] - creation time</p>
+</li><li>
+<p>current_sign_in_at [datetime] - Devise Trackable module</p>
+</li><li>
+<p>current_sign_in_ip [string] - Devise Trackable module</p>
+</li><li>
+<p>email [string, default=“”, not null]</p>
+</li><li>
+<p>encrypted_password [string, default=“”, not null] - Devise encrypted
+password</p>
+</li><li>
+<p>last_sign_in_at [datetime] - Devise Trackable module</p>
+</li><li>
+<p>last_sign_in_ip [string] - Devise Trackable module</p>
+</li><li>
+<p>remember_created_at [datetime] - Devise Rememberable module</p>
+</li><li>
+<p>reset_password_sent_at [datetime] - Devise Recoverable module</p>
+</li><li>
+<p>reset_password_token [string] - Devise Recoverable module</p>
+</li><li>
+<p>sign_in_count [integer, default=0, not null] - Devise Trackable module</p>
+</li><li>
+<p>updated_at [datetime, not null] - last update time</p>
+</li></ul>
 
   </section>
 
@@ -139,7 +156,7 @@ href="Binder.html">Binder</a>).</p>
 
           
           <div class="method-source-code" id="binders-source">
-            <pre><span class="ruby-comment"># File app/models/user.rb, line 20</span>
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 35</span>
 <span class="ruby-identifier">has_many</span> <span class="ruby-value">:binders</span>
 </pre>
           </div>

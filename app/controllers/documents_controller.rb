@@ -1,3 +1,5 @@
+##
+#Controller for the Document class.
 class DocumentsController < ApplicationController
   before_action :set_tabs
 

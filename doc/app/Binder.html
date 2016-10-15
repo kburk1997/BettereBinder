@@ -87,7 +87,18 @@
 
   <section class="description">
     
-<p>This class is the base for the digital binder.</p>
+<p>Attributes:</p>
+<ul><li>
+<p>id [integer, primary, not null] - primary key</p>
+</li><li>
+<p>created_at [datetime] - creation time</p>
+</li><li>
+<p>description [text] - TODO: document me</p>
+</li><li>
+<p>title [string]</p>
+</li><li>
+<p>updated_at [datetime] - last update time</p>
+</li></ul>
 
   </section>
 
@@ -129,7 +140,7 @@
 
           
           <div class="method-source-code" id="tabs-source">
-            <pre><span class="ruby-comment"># File app/models/binder.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/models/binder.rb, line 19</span>
 <span class="ruby-identifier">has_many</span> <span class="ruby-value">:tabs</span>
 </pre>
           </div>
@@ -162,7 +173,7 @@ edited by that user.</p>
 
           
           <div class="method-source-code" id="user-source">
-            <pre><span class="ruby-comment"># File app/models/binder.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/models/binder.rb, line 15</span>
 <span class="ruby-identifier">belongs_to</span> <span class="ruby-value">:user</span>
 </pre>
           </div>

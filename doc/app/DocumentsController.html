@@ -97,6 +97,8 @@
 
   <section class="description">
     
+<p>Controller for the <a href="Document.html">Document</a> class.</p>
+
   </section>
 
   
@@ -137,7 +139,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 34</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 36</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@document</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">document_params</span>)
   <span class="ruby-ivar">@document</span>.<span class="ruby-identifier">save</span>
@@ -172,7 +174,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 45</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@document</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@binder</span>,<span class="ruby-ivar">@tab</span>,<span class="ruby-ivar">@document</span>)
@@ -206,7 +208,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 31</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -238,7 +240,7 @@
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 9</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 11</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@documents</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">all</span>
 
@@ -273,7 +275,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 25</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 27</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@document</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>
 
@@ -308,7 +310,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@tabs</span>=<span class="ruby-ivar">@binder</span>.<span class="ruby-identifier">tabs</span>
   <span class="ruby-ivar">@documents</span>=<span class="ruby-ivar">@tab</span>.<span class="ruby-identifier">documents</span>
@@ -347,7 +349,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 40</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@document</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">document_params</span>)
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@binder</span>,<span class="ruby-ivar">@tab</span>,<span class="ruby-ivar">@document</span>)
