@@ -1,7 +1,7 @@
-Sat, 15 Oct 2016 11:47:51 -0400
+Sat, 15 Oct 2016 11:54:56 -0400
 README.rdoc	Tue, 13 Sep 2016 15:46:48 -0400
 app/controllers/application_controller.rb	Tue, 13 Sep 2016 15:46:54 -0400
-app/controllers/binders_controller.rb	Sat, 15 Oct 2016 11:47:45 -0400
+app/controllers/binders_controller.rb	Sat, 15 Oct 2016 11:54:51 -0400
 app/controllers/documents_controller.rb	Thu, 13 Oct 2016 16:01:21 -0400
 app/controllers/static_pages_controller.rb	Tue, 27 Sep 2016 16:10:54 -0400
 app/controllers/tab_controller.rb	Tue, 04 Oct 2016 16:38:27 -0400

@@ -35,20 +35,36 @@ class BindersController < ApplicationController
   def show
     @tabs=@binder.tabs
   end
-  
+
   ##
   #Login required
-  #Creates a new binder.
+  #
+  #Renders form to create a new binder.
+  #
   #Route:
   # GET /binders/new
   def new
     @binder = Binder.new
   end
-
+  ##
+  #Login required
+  #
+  #Renders form to edit a binder with a given ID.
+  #
+  #Route:
   # GET /binders/1/edit
   def edit
   end
-
+  ##
+  #Login required
+  #
+  #Called upon submitting the "new binder" form.
+  #Creates a new binder with the data given in the form.
+  #
+  #If this method fails, new() is called.
+  #Otherwise, the new binder is successfully shown using show().
+  #
+  #Routes:
   # POST /binders
   # POST /binders.json
   def create
@@ -64,9 +80,14 @@ class BindersController < ApplicationController
       end
     end
   end
-
-  # PATCH/PUT /binders/1
-  # PATCH/PUT /binders/1.json
+  ##
+  #Login required
+  #
+  #Updates a binder with a given ID after submitting a form.
+  #
+  #Routes:
+  #* PATCH/PUT /binders/1
+  #* PATCH/PUT /binders/1.json
   def update
     respond_to do |format|
       if @binder.update(binder_params)
@@ -78,7 +99,12 @@ class BindersController < ApplicationController
       end
     end
   end
-
+  ##
+  #Login required
+  #
+  #Deletes a binder with a given ID.
+  #
+  #Routes:
   # DELETE /binders/1
   # DELETE /binders/1.json
   def destroy
@@ -89,8 +115,11 @@ class BindersController < ApplicationController
     end
   end
 
+  ##
+  #Private instance methods
   private
-    # Use callbacks to share common setup or constraints between actions.
+    ##
+    # Returns a binder with a given id.
     def set_binder
       @binder = Binder.find(params[:id])
     end

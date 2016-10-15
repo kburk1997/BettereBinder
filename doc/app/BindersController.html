@@ -135,13 +135,24 @@
 
         <div class="method-description">
           
-          <p>POST /binders POST /binders.json</p>
+          <p>Login required</p>
+
+<p>Called upon submitting the “new binder” form. Creates a new binder with the
+data given in the form.</p>
+
+<p>If this method fails, new() is called. Otherwise, the new binder is
+successfully shown using show().</p>
+
+<p>Routes:</p>
+
+<pre>POST /binders
+POST /binders.json</pre>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 54</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 70</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@binder</span> = <span class="ruby-constant">Binder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">binder_params</span>)
 
@@ -178,13 +189,20 @@
 
         <div class="method-description">
           
-          <p>DELETE /binders/1 DELETE /binders/1.json</p>
+          <p>Login required</p>
+
+<p>Deletes a binder with a given ID.</p>
+
+<p>Routes:</p>
+
+<pre>DELETE /binders/1
+DELETE /binders/1.json</pre>
           
           
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 84</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 110</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@binder</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
@@ -215,13 +233,19 @@
 
         <div class="method-description">
           
-          <p>GET /binders/1/edit</p>
+          <p>Login required</p>
+
+<p>Renders form to edit a binder with a given ID.</p>
+
+<p>Route:</p>
+
+<pre>GET /binders/1/edit</pre>
           
           
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 49</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 56</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -287,7 +311,11 @@
 
         <div class="method-description">
           
-          <p>Login required Creates a new binder. Route:</p>
+          <p>Login required</p>
+
+<p>Renders form to create a new binder.</p>
+
+<p>Route:</p>
 
 <pre>GET /binders/new</pre>
           
@@ -295,7 +323,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 44</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 46</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@binder</span> = <span class="ruby-constant">Binder</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
@@ -360,13 +388,22 @@ id is 1.</p>
 
         <div class="method-description">
           
-          <p>PATCH/PUT /binders/1 PATCH/PUT /binders/1.json</p>
+          <p>Login required</p>
+
+<p>Updates a binder with a given ID after submitting a form.</p>
+
+<p>Routes:</p>
+<ul><li>
+<p>PATCH/PUT /binders/1</p>
+</li><li>
+<p>PATCH/PUT /binders/1.json</p>
+</li></ul>
           
           
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 70</span>
+            <pre><span class="ruby-comment"># File app/controllers/binders_controller.rb, line 91</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@binder</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">binder_params</span>)
