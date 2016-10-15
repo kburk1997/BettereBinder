@@ -61,8 +61,8 @@ class BindersController < ApplicationController
   #Called upon submitting the "new binder" form.
   #Creates a new binder with the data given in the form.
   #
-  #If this method fails, new() is called.
-  #Otherwise, the new binder is successfully shown using show().
+  #If this method fails, #new is called.
+  #Otherwise, the new binder is successfully shown using #show.
   #
   #Routes:
   # POST /binders
