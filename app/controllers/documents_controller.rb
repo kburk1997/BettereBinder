@@ -8,12 +8,16 @@ class DocumentsController < ApplicationController
 
   respond_to :html
 
+  ##
+  #Shows all documents in a given binder and tab
   def index
     @documents = Document.all
 
     respond_with(@documents)
   end
 
+  ##
+  #Shows the current binder, with the current tab open, and displaying the document in the iframe.
   def show
     @tabs=@binder.tabs
     @documents=@tab.documents
@@ -24,26 +28,47 @@ class DocumentsController < ApplicationController
     respond_with(@binder,@tab,@document,@tabs,@documents)
   end
 
+  ##
+  #Login required
+  #
+  #Display a form to create a new document in the given binder and tab.
   def new
     @document = Document.new
 
     respond_with(@binder,@tab, @document)
   end
 
+  ##
+  #Login required
+  #
+  #Display a form to edit a given document in the given binder and tab.
   def edit
   end
 
+  ##
+  #Login required
+  #
+  #Upon submission of a form, creates a document in the current tab and binder.
   def create
     @document = Document.new(document_params)
     @document.save
     respond_with(@binder,@tab,@document)
   end
 
+
+  ##
+  #Login required
+  #
+  #Upon submission of a form, updates a given document in the current tab and binder.
   def update
     @document.update(document_params)
     respond_with(@binder,@tab,@document)
   end
 
+  ##
+  #Login required
+  #
+  #After user confirmation, deletes the current document and removes it from the current tab and current binder.
   def destroy
     @document.destroy
     respond_with(@binder,@tab,@document)

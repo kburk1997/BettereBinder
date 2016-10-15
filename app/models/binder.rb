@@ -1,13 +1,13 @@
 ##
 #This class is the base for the digital binder.
 #Controller: BindersController
-
-# Attributes:
-# * id [integer, primary, not null] - primary key
-# * created_at [datetime] - creation time
-# * description [text] - TODO: document me
-# * title [string]
-# * updated_at [datetime] - last update time
+#
+#=Attributes:
+#* id [integer, primary, not null] - primary key
+#* created_at [datetime] - creation time
+#* description [text] - TODO: document me
+#* title [string]
+#* updated_at [datetime] - last update time
 class Binder < ActiveRecord::Base
 	##
 	#Each binder belongs to a User and can only be edited by that user.

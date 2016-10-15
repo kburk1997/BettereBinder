@@ -85,7 +85,26 @@
 
   <section class="description">
     
-<p>Attributes:</p>
+<p>Base user class for the platform.</p>
+
+<p>This user has all default devise modules, including:</p>
+<ul><li>
+<p>database_authenticable</p>
+</li><li>
+<p>registerable</p>
+</li><li>
+<p>recoverable</p>
+</li><li>
+<p>rememberable</p>
+</li><li>
+<p>trackable</p>
+</li><li>
+<p>validatable</p>
+</li></ul>
+
+<p>See Devise documentation for more information on these modules.</p>
+
+<h1 id="class-User-label-Attributes-3A">Attributes:<span><a href="#class-User-label-Attributes-3A">&para;</a> <a href="#top">&uarr;</a></span></h1>
 <ul><li>
 <p>id [integer, primary, not null] - primary key</p>
 </li><li>
@@ -156,7 +175,7 @@ href="Binder.html">Binder</a>).</p>
 
           
           <div class="method-source-code" id="binders-source">
-            <pre><span class="ruby-comment"># File app/models/user.rb, line 35</span>
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 36</span>
 <span class="ruby-identifier">has_many</span> <span class="ruby-value">:binders</span>
 </pre>
           </div>

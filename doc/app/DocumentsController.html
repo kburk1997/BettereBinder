@@ -133,13 +133,16 @@
 
         <div class="method-description">
           
-          
+          <p>Login required</p>
+
+<p>Upon submission of a form, creates a document in the current tab and
+binder.</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 36</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 52</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@document</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">document_params</span>)
   <span class="ruby-ivar">@document</span>.<span class="ruby-identifier">save</span>
@@ -168,13 +171,16 @@
 
         <div class="method-description">
           
-          
+          <p>Login required</p>
+
+<p>After user confirmation, deletes the current document and removes it from
+the current tab and current binder.</p>
           
           
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 47</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 72</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@document</span>.<span class="ruby-identifier">destroy</span>
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@binder</span>,<span class="ruby-ivar">@tab</span>,<span class="ruby-ivar">@document</span>)
@@ -202,13 +208,15 @@
 
         <div class="method-description">
           
-          
+          <p>Login required</p>
+
+<p>Display a form to edit a given document in the given binder and tab.</p>
           
           
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 33</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 45</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -234,13 +242,13 @@
 
         <div class="method-description">
           
-          
+          <p>Shows all documents in a given binder and tab</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@documents</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">all</span>
 
@@ -269,13 +277,15 @@
 
         <div class="method-description">
           
-          
+          <p>Login required</p>
+
+<p>Display a form to create a new document in the given binder and tab.</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 27</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@document</span> = <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>
 
@@ -304,13 +314,14 @@
 
         <div class="method-description">
           
-          
+          <p>Shows the current binder, with the current tab open, and displaying the
+document in the iframe.</p>
           
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 17</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@tabs</span>=<span class="ruby-ivar">@binder</span>.<span class="ruby-identifier">tabs</span>
   <span class="ruby-ivar">@documents</span>=<span class="ruby-ivar">@tab</span>.<span class="ruby-identifier">documents</span>
@@ -343,13 +354,16 @@
 
         <div class="method-description">
           
-          
+          <p>Login required</p>
+
+<p>Upon submission of a form, updates a given document in the current tab and
+binder.</p>
           
           
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 42</span>
+            <pre><span class="ruby-comment"># File app/controllers/documents_controller.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@document</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">document_params</span>)
   <span class="ruby-identifier">respond_with</span>(<span class="ruby-ivar">@binder</span>,<span class="ruby-ivar">@tab</span>,<span class="ruby-ivar">@document</span>)
