@@ -44,6 +44,7 @@ class BindersController < ApplicationController
   #Route:
   # GET /binders/new
   def new
+    @user=current_user
     @binder = Binder.new
   end
   ##
@@ -68,7 +69,8 @@ class BindersController < ApplicationController
   # POST /binders
   # POST /binders.json
   def create
-    @binder = Binder.new(binder_params)
+    @user=current_user
+    @binder = @user.binders.create(binder_params)
 
     respond_to do |format|
       if @binder.save
