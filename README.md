@@ -5,9 +5,9 @@
 Better eBinder is an open source, customizable digital binder platform.
 
 Binder structure:
-	* eBinder - collection of tabs
-	*Tab - collection of documents
-	*Document - an externally hosted file to be embedded into the web page. Possible feature - WYSIWG editing
+* eBinder - collection of tabs
+* Tab - collection of documents
+* Document - an externally hosted file to be embedded into the web page. Possible feature - WYSIWG editing
 
 Example binder: http://bit.ly/apples-stamford
 
