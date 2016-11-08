@@ -323,6 +323,10 @@ form{
   margin: 15px;
 }
 
+.home-btn:visited{
+  color: #fff !important;
+}
+
 .register-header{
   color: #7466dc;
   margin: 15px;
