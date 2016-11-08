@@ -26,5 +26,8 @@
   </p>
 <% end %>
 
+
+<%= link_to ('<i class="fa fa-plus" style="display: inline block"></i>&nbsp; New tab').html_safe, new_binder_tab_path(@binder) %><br>
+
 <%= link_to 'Edit', edit_binder_path(@binder) %> |
 <%= link_to 'Back', binders_path %>
