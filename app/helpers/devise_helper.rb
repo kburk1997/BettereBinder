@@ -1,4 +1,9 @@
+##
+#Helper for the Devise module.
 module DeviseHelper
+
+  ##
+  #Generate error messages.
   def devise_error_messages!
     return '' if resource.errors.empty?
 

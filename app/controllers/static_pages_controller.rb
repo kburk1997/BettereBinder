@@ -13,7 +13,9 @@ class StaticPagesController < ApplicationController
   	render layout: "developer_home_template"
   end
 
+  ##
+  #Renders the contribute page.
   def contribute
-
+  	render layout: "developer_home_template"
   end
 end
