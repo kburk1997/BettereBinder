@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BettereBinder</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+			<a class="navbar-brand" href='/'><img src="http://i.imgur.com/Vsh03gC.png" height="100%"></a>
+		</div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+		<ul class="nav navbar-nav">
+			<% if user_signed_in? %>
+							<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome!
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">My Binders</a></li>
+          <li>  <%= link_to('Edit User Info', edit_user_registration_path) %>
+</li>
+          <li><%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %></li>
+        </ul>
+      </li>
+			<%else%>
+			<li> <%= link_to('Register', new_user_registration_path)  %></li>
+			<li>  <%= link_to('Log In', new_user_session_path)  %>  
+</li>
+			<%end%>
+		</ul>
+					<div id="right-bar">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#about">FAQ</a></li>
+			<li><a href="#pricing">Documentation</a></li>
+
+			<li><a href="#contribute">Source Code</a></li>
+						</ul></div>
+	</div>
+	</div>
+</nav>
+
+<%= yield %>
+
+<footer class="footer" id="contribute"><div class="container-fluid"><p><div class="col-xs-8">Part of <a href="http://rcos.io">Rensselaer Center for Open Source</a></div><div class="col-xs-4"><a href="https://github.com/kburk1997/BettereBinder">Source Code</a>&nbsp;<a href="https://rcos.io/projects/kburk1997/betterebinder/blog">Blog</a></div></p></div></footer>
+
+
+</body>
+</html>
+

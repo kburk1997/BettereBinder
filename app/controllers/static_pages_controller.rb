@@ -6,4 +6,14 @@ class StaticPagesController < ApplicationController
   def home
   	render layout: "static_home"
   end
+
+  ##
+  #Renders the developer home page.
+  def developer_home
+  	render layout: "developer_home_template"
+  end
+
+  def contribute
+
+  end
 end

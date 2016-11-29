@@ -7,6 +7,11 @@ BettereBinder::Application.routes.draw do
     end
   end
 
+  scope ':developer' do
+    resources :documentation
+    root  'static_pages#developer_home', as: :dev_root
+    get 'contribute' => 'static_pages#contribute'
+  end
   get 'my_binders' => 'binders#user'
   get "static_pages/home"
 
