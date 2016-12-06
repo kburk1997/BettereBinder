@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://raw.githubusercontent.com/kburk1997/BettereBinder/master/app/assets/stylesheets/application.css">
+
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"><img src="http://i.imgur.com/Vsh03gC.png" height="100%"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome!
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/my_binders/">My Binders</a></li>
+                            <li>  <a>Edit User Info</a>
+                            </li>
+                            <li><a>Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="right-bar">
+                    <ul class="nav navbar-nav navbar-right">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a type="button" class="btn btn-default">Show</a>
+                                <a type="button" class="btn btn-default">Edit</a>
+                                <a type="button" class="btn btn-default">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a type="button" class="btn btn-default">Show</a>
+                                <a type="button" class="btn btn-default">Edit</a>
+                                <a type="button" class="btn btn-default">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a type="button" class="btn btn-default">Show</a>
+                                <a type="button" class="btn btn-default">Edit</a>
+                                <a type="button" class="btn btn-default">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a type="button" class="btn btn-default">Show</a>
+                                <a type="button" class="btn btn-default">Edit</a>
+                                <a type="button" class="btn btn-default">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="footer" id="contribute">
+            <div class="container-fluid">
+                <p>
+                    <div class="col-xs-8">
+                        Part of <a href="http://rcos.io">Rensselaer Center for Open Source</a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a href="https://github.com/kburk1997/BettereBinder">Source Code</a>
+                    </div>
+                </p>
+            </footer>
+    </div>
+
+</body>
+</html>
